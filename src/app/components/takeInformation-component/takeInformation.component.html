@@ -1,0 +1,46 @@
+<h1>Add Information</h1>
+<h1>{{message}}</h1>
+
+<h4 id="show123"></h4>
+
+<form #takeInformationForm="ngForm" (submit)="takeInformation()">
+
+
+  <div>
+    <label for="name" >name</label>
+    <input type="text" id="name"name="name" [(ngModel)]="takeInformationFromForm.name" required>
+  </div>
+
+  <div>
+    <label for="email" >email</label>
+    <input type="text" id="email" name="email" [(ngModel)]="takeInformationFromForm.email"
+           #model="ngModel"
+           required>
+  </div>
+
+  <div>
+    <label for="age" >age</label>
+    <input type="number" id="age" name="age" [(ngModel)]="takeInformationFromForm.age"
+           min="1950"
+           max="2050"
+           required>
+  </div>
+
+  <div>
+    <label for="aboutInformation" >aboutInformation</label>
+    <input type="text" id="aboutInformation" name="aboutInformation" [(ngModel)]="takeInformationFromForm.aboutInformation"
+           #engine="ngModel"
+           required>
+  </div>
+
+  <div>
+    <label for="message" >message</label>
+    <input type="text" id="message" name="message" [(ngModel)]="takeInformationFromForm.message"
+           #price="ngModel"
+           required>
+  </div>
+
+
+  <button id="goButton" type="submit"
+  >Submit</button>
+</form>
